@@ -28,8 +28,8 @@ Use the provided `template.md` structure in this folder.
 
 ## Specific Deliverables
 1. **Ubiquitous Language Baseline**: Domain-specific terminology and its business meaning (DDD).
-2. **Business Metrics**: Define KPIs (DAU/MAU, ARR, Churn) and **Total/Concurrent User Projections**.
-3. **Stakeholder Mapping & RACI**: 
+2. **Business Metrics**: Define KPIs (DAU/MAU, ARR, Churn), **Total/Concurrent User Projections**, and **Customer Satisfaction Metrics** (NPS, CSAT, Support Resolution Times, Rating Analytics).
+3. **Stakeholder Mapping & RACI**:  
    - Identify roles and their sentiment.
    - Define a **Project RACI Matrix** (Responsible, Accountable, Consulted, Informed) for all 10 phases.
 4. **Initial Resource Baseline**: Preliminary headcount projection (e.g., number of developers, designers, QA).

@@ -44,7 +44,8 @@ Use the provided `template.md` structure in this folder.
 1. **CI/CD Pipeline**: Define stages, tools, and success gates for deployment.
 2. **Infrastructure & Operational Metrics**: Define monitoring targets and alerting thresholds.
 3. **Operational & Business intelligence Dashboards**: 
-   - Define visual layout for SLIs/SLOs (e.g. Grafana rows) and **Business KPIs** (e.g. PostHog Funnels).
+   - Define visual layout for SLIs/SLOs including **Database Performance Indicators** (e.g. Grafana rows) and **Business KPIs**.
+   - Specify **Customer Satisfaction Metrics Dashboard** (NPS, CSAT, Ticket Resolution, Ratings).
    - Specify visualizations (Heatmaps, Time-series, Funnels, Gauge).
 4. **Operational & Maintenance Runbook**:
    - Define triggers, actions, and notification paths for service recovery.

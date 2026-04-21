@@ -13,6 +13,10 @@
 | **Total User Base** | [e.g., 500,000] | Registration DB |
 | **Concurrent Users** | [e.g., 10,000] | Load Balancer Metrics |
 | **Business Value** | [e.g., $10M ARR] | Financial Reporting |
+| **Customer Satisfaction (CSAT)** | [e.g., >90%] | Post-interaction surveys |
+| **Net Promoter Score (NPS)** | [e.g., >50] | Quarterly surveys |
+| **Support Resolution** | [e.g., <24h MTTR] | Helpdesk Analytics |
+| **User Ratings** | [e.g., >4.5 Stars] | App Store / Reviews |
 
 ## 3. Project Planning & Governance
 ### 3.1 Initial Resource Estimates

@@ -33,6 +33,7 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **Availability**| UI Gateway | Request Latency (p99) | Time-series | < 200ms |
 | **Saturation** | DB Cluster | CPU/Memory Usage | Gauge | < 80% |
+| **DB Performance**| DB Cluster | Slow Queries / Query Latency| Bar Chart / Line | < 50ms |
 | **Errors** | Edge Svc | Error Rate (4xx/5xx) | Heatmap | < 0.1% |
 
 ### 4.2 Business Analytics Dashboard (KPIs)
@@ -40,6 +41,14 @@
 | :--- | :--- | :--- | :--- | :--- |
 | **Conversion** | User Signups | `user_signup_completed`| Funnel | Quarterly Growth |
 | **Engagement** | Active Users | `session_started` | Gauge | Retention Target |
+
+### 4.3 Customer Satisfaction Metrics Dashboard
+| Section | Metric Name | Source / Tool | Viz Type | Target / Goal |
+| :--- | :--- | :--- | :--- | :--- |
+| **Sentiment** | Net Promoter Score (NPS) | Product Survey Tool | Trend Line | > 50 |
+| **Satisfaction**| CSAT Score | Post-interaction Survey| Gauge | > 90% |
+| **Support** | Ticket Resolution Time | Helpdesk Integration | Bar Chart | < 24 Hours |
+| **Reputation** | App/Platform Rating | App Store Analytics | Big Number | 4.5+ Stars |
 
 ## 5. Incident Response Runbook
 *Standardized procedures for service recovery and notification.*
