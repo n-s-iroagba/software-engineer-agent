@@ -26,6 +26,12 @@
 | :--- | :--- | :--- | :--- | :--- |
 | TC-UAT-01 | [e.g. Fund Account]| [Customer] | `fund-button`, `amount-input` | [Balance updated]|
 
+### 2.4 Security & Vulnerability Testing (SAST/DAST)
+| Test ID | Vulnerability Target | Attack Vector | Expected Defense | NFRS Mapping |
+| :--- | :--- | :--- | :--- | :--- |
+| TC-SEC-01 | Mass Assignment | Send extra fields in payload | Server ignores fields / throws 400 | NFRS-SEC-xx |
+| TC-SEC-02 | IDOR | Fetch resource owned by user B as user A | Server returns 403 or 404 | NFRS-SEC-xx |
+
 ## 3. Governance & Acceptance Gates
 
 ### 3.1 Formal RACI (QA Layer)
@@ -54,6 +60,7 @@
 | Role | Name | Signature / Date | Status |
 | :--- | :--- | :--- | :--- |
 | **QA Lead** | [Name] | | [Pending] |
+| **Security Officer** | [Name] | | [Pending] |
 | **Project Sponsor** | [Name] | | [Pending] |
 
 ## 6. RTM Verification (Testing Layer)

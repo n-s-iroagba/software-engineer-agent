@@ -58,7 +58,12 @@
 
 **Conclusion & Rationalization**: [Justify based on frontend framework compatibility and bundle size constraints]
 
-### 1.11 Error Handling & Propagation Strategy (Exceptions, Result Types/Monads, Go-style)
+### 1.11 UI Styling Strategy (Tailwind CSS, CSS Modules, Styled Components, Emotion)
+[DECISION_MATRIX_SAME_STRUCTURE]
+
+**Conclusion & Rationalization**: [Justify based on team familiarity, runtime overhead, and bundle size]
+
+### 1.12 Error Handling & Propagation Strategy (Exceptions, Result Types/Monads, Go-style)
 [DECISION_MATRIX_SAME_STRUCTURE]
 
 **Conclusion & Rationalization**: [Justify based on language idiomaticity and system robustness targets]
@@ -131,9 +136,11 @@
 - **Consequences**: [Pros and Cons]
 
 ## 9. Threat Model (Security Mitigation)
-| Threat | Mitigation Strategy | NFRS Mapping |
-| :--- | :--- | :--- |
-| [Threat Description] | [How it is handled] | [NFRS-SEC-01] |
+| Threat Vector | Description / Impact | Mitigation Strategy | NFRS Mapping |
+| :--- | :--- | :--- | :--- |
+| **Logic/Mass Assignment** | [What if DTOs are bypassed?] | [e.g. Strict DTO bindings] | [NFRS-SEC-xx] |
+| **IDOR / AuthZ Bypass** | [What if user alters IDs?] | [e.g. Resource-level ownership checks] | [NFRS-SEC-xx] |
+| **Injection** | [SQLi, XSS] | [e.g. ORM usage, Sanitization context] | [NFRS-SEC-xx] |
 
 ## 10. NFR Compliance Matrix (Design Logic)
 *Justifying architectural choices against Phase 03 Non-Functional Requirements.*
@@ -156,6 +163,7 @@
 | Role | Name | Signature / Date | Status |
 | :--- | :--- | :--- | :--- |
 | **Architect** | [Name] | | [Pending] |
+| **Security Officer** | [Name] | | [Pending] |
 | **Lead Developer** | [Name] | | [Pending] |
 
 ## 13. Baseline Verification

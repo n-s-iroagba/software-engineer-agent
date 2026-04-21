@@ -8,7 +8,7 @@ Transform Behavioral Use Cases and Stakeholder Goals into a technical **System R
 ## Step-by-Step Execution Logic
 1. **Step 0: Consultation & Clarification**: 
    - Analyze Phase 01 and 02 Baselines.
-   - **Ask 2-3 questions** to clarify performance thresholds, scale projections, or **critical business KPIs**.
+   - **Ask 2-3 questions** to clarify performance thresholds, critical business KPIs, **security boundaries (trust zones)**, or **data compliance parameters (e.g. PII masking needs)**.
 2. **Step 1: FRS Extraction**: Extract atomic "SHALL" statements.
 3. **Step 2: NFRS & Workload Analysis**: Formalize scale metrics, **Incident Response targets (MTTR)**, and reliability constraints.
 4. **Step 3: Analytics Registry**: Define value-driven business events.
@@ -30,5 +30,5 @@ Use the provided `template.md` structure in this folder.
 2. **NFRS Specification**: Security, Performance, Scalability, and **Incident Response**.
 3. **Workload Analysis Table**: Derived technical load projections.
 4. **Observability & Business Analytics Registry**: Detailed telemetry and KPI definitions.
-5. **Industry Standards & Compliance Baseline**: Formal definition of NFR-COMP requirements (ISO, GDPR, WCAG, etc.).
+5. **Industry Standards & Compliance Baseline**: Formal definition of NFR-COMP requirements (ISO, GDPR, WCAG, etc.) including explicit PII mapping.
 6. **Updated RTM**: Map FRS/NFRS to Stakeholder Goals from Phase 1.

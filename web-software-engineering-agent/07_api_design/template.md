@@ -64,24 +64,34 @@
 | ERR-AUTH-001 | 401 | Invalid Credentials | The email or password provided is incorrect. |
 | ERR-TRAN-002 | 409 | Insufficient Funds | Your account balance is too low for this transfer. |
 
-## 6. NFR Compliance Matrix (API Layer)
+## 6. Business Logic & Vulnerability Mitigations
+*Explicitly document endpoint-level mitigations against OWASP Top 10 API vulnerabilities (e.g., IDOR, Mass Assignment).*
+
+| Endpoint / Method | Vulnerability Vector | Technical Mitigation |
+| :--- | :--- | :--- |
+| `PATCH /v1/users/:id` | IDOR (AuthZ bypass) | Verify `session.userId == :id` or `session.role == ADMIN` |
+| `POST /v1/assets` | Mass Assignment | Bind request strictly to `CreateAssetDto`, ignore extra fields |
+| `POST /v1/transfers` | Business Logic Flaw | Atomic transaction boundary, negative balance check before db commit |
+
+## 7. NFR Compliance Matrix (API Layer)
 | NFR ID | Requirement | API Mitigation | Status |
 | :--- | :--- | :--- | :--- |
 | NFRS-SEC-03 | Rate Limiting | [e.g. Redis sliding window] | [Pass] |
 
-## 7. World-Class RTM (API Layer)
+## 8. World-Class RTM (API Layer)
 | Req ID | Endpoint / Hook | Method | Status | Priority |
 | :--- | :--- | :--- | :--- | :--- |
 | FRS-01 | `GET /assets` | `REST` | Designed | P0 |
 
 ---
-## 8. Human Review & Baseline Sign-off
+## 9. Human Review & Baseline Sign-off
 > [!IMPORTANT]
 > **AI Instruction**: STOP and WAIT for a human signature below before providing the next folder's output.
 
 | Role | Name | Signature / Date | Status |
 | :--- | :--- | :--- | :--- |
 | **API Architect** | [Name] | | [Pending] |
+| **Security Officer** | [Name] | | [Pending] |
 | **Lead Developer** | [Name] | | [Pending] |
 
-## 9. Baseline Verification
+## 10. Baseline Verification

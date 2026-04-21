@@ -14,10 +14,11 @@ Consult this inventory when selecting the optimal authentication and authorizati
 
 ## Step-by-Step Execution Logic
 1. **Step 0: Consultation & Clarification**: 
-   - Analyze architecture constraints (Phase 04), data model (Phase 05), and UI blueprint (Phase 06).
+   - Analyze architecture constraints (Phase 04), data model / DTOs (Phase 05), and UI blueprint (Phase 06).
    - **Ask 2-3 questions** to clarify API security or versioning strategy.
-2. **Step 1: Contract Design**: Define protocol-first endpoints and payloads.
-3. **Step 2: Error Standardization**: Define the RFC 7807 error schema and business error code registry.
+2. **Step 1: Contract Design**: Define protocol-first endpoints and payloads. Map external payloads strictly to Phase 05 DTOs.
+3. **Step 2: Vulnerability Revisit**: Explicitly document IDOR checks and Input Validation on all endpoints.
+4. **Step 3: Error Standardization**: Define the RFC 7807 error schema and business error code registry.
 
 ## Constraints
 1. **Traceability**: Every endpoint must be linked to at least one FRS and one UI Screen.
@@ -38,6 +39,7 @@ Use the provided `template.md` structure in this folder.
 1. **API Protocol Selection**: Standardize the communication format (REST vs gRPC) using a Decision Matrix.
 2. **Authentication Strategy**: Standardize the auth approach using a Decision Matrix.
 3. **API Endpoint Inventory**: Detailed mapping of routes to FRS and UI Screens.
-4. **Request/Response Contracts**: Payload specifications with types.
+4. **Request/Response Contracts**: Payload specifications with types bound to Phase 05 DTOs.
 5. **Standardized Error Management**: Define all business-specific error codes and mandate the **RFC 7807** Problem Details schema for all error responses.
-6. **Updated RTM**: Map Functional Requirements (FRS) to API Endpoints.
+6. **Vulnerability Mitigations**: Explicit mitigation map for IDOR, Mass Assignment, and injection vectors per endpoint.
+7. **Updated RTM**: Map Functional Requirements (FRS) to API Endpoints.

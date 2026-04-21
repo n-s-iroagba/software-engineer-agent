@@ -39,8 +39,9 @@ Use the provided `template.md` structure in this folder.
 1. **Test Toolstack Selection**: Weighted Decision Matrix for test framework selection (Unit, Integration, E2E).
 2. **Master Test Strategy**: Define the pyramid (Unit, Integration, E2E).
 3. **Test Case Inventory**: Granular steps, inputs, and expected outcomes.
-4. **Traceability Matrix Mapping**: Every FRS/NFRS must have at least one test case.
-5. **Governance & UAT Sign-off**: 
+4. **Security Test Cases**: Explicit test cases exploiting business logic flaws (e.g., negative testing for Mass Assignment, IDOR).
+5. **Traceability Matrix Mapping**: Every FRS/NFRS must have at least one test case.
+6. **Governance & UAT Sign-off**: 
    - Define the RACI for defect triage.
    - Establish a formal "Acceptance Gate" scorecard for stakeholder approval.
-6. **Acceptance Criteria**: Define the "Ready for Production" technical thresholds.
+7. **Acceptance Criteria**: Define the "Ready for Production" technical thresholds.

@@ -46,6 +46,8 @@ Every phase in this pipeline follows a strict **"Consult -> Design -> Review -> 
 ## 2. Governance Principles
 - **Zero Hardcoding**: All technical choices (stack, DB, auth) must be selected from provided inventories using a Weighted Decision Matrix. No magic string literals allowed in business logic; use Constants/Enums.
 - **Traceability (RTM)**: Every requirement must be tracked from Phase 01 to Phase 10 via the living Requirements Traceability Matrix.
+- **Security Vulnerability Audits**: All designs must explicitly check and mitigate business logic vulnerabilities, Insecure Direct Object References (IDOR), and Injection flaws.
+- **DTO Mandate (Mass Assignment Prevention)**: Explicit Data Transfer Objects (DTOs) MUST be used to decouple external payload structures from internal domain entities.
 - **Service Code Specification**: All implementation methods must use JSDoc tags for `@req` (Requirement), `@layer` (Architectural Layer), and `@screen` (UI Screen ID).
 - **Ubiquitous Language**: Terminology defined in Phase 01 is immutable across all code and database artifacts.
 - **NFR Compliance**: Every design step (Phases 04-07) must audit against the NFRs (Security, Performance, Scale) defined in Phase 03.
@@ -54,10 +56,10 @@ Every phase in this pipeline follows a strict **"Consult -> Design -> Review -> 
 ## 3. Global Project RACI
 | Phase | Accountable | Responsible | Consulted | Informed |
 | :--- | :--- | :--- | :--- | :--- |
-| **01-03 Requirements**| Product Owner | Business Analyst | Stakeholders | Dev Team |
-| **04-07 Design** | Lead Architect | Assigned Leads | Security/Ops | Stakeholders |
-| **08-09 Engineering** | Lead Developer | Dev/QA Team | Architect | Product Owner |
-| **10 Operations** | DevOps Lead | SRE Team | Architect | All Hands |
+| **01-03 Requirements**| Product Owner | Business Analyst | Stakeholders, Security & Compliance Officers | Dev Team |
+| **04-07 Design** | Lead Architect | Assigned Leads | Security Officer, Compliance Officer | Stakeholders |
+| **08-09 Engineering** | Lead Developer | Dev/QA Team | Architect, Security Officer | Product Owner |
+| **10 Operations** | DevOps Lead | SRE Team | Architect, Compliance Officer | All Hands |
 
 ## 4. Documentation Inventory & Standards
 - **Architectural Documentation**: Mandatory ADRs for every non-trivial technical decision (Phase 04).

@@ -37,26 +37,32 @@ Consult the following inventories when evaluating your Decision Matrices. Choose
 - **Atomic Design**: Bottom-up reusability (Atoms, Molecules, etc.).
 - **Standard (By View/Page)**: Simpler structure for smaller applications.
 
-### 4. Communication Patterns
+### 4. UI Styling Strategy
+- **Tailwind CSS**: Utility-first, fast iteration, high standardization.
+- **CSS Modules**: Locally scoped CSS, standard syntax, zero runtime overhead.
+- **CSS-in-JS (Styled Components / Emotion)**: Dynamic styling based on props, runtime overhead.
+- **UI Component Libraries**: MUI, Chakra UI, Ant Design (pre-built components, high vendor lock-in).
+
+### 5. Communication Patterns
 - **Synchronous**: REST (Standard), GraphQL (Flexible data), gRPC (High-performance).
 - **Asynchronous**: Message Queuing (RabbitMQ/Kafka), Event Bus.
 - **Real-time**: WebSockets, Server-Sent Events (SSE).
 
-### 5. Observability & Monitoring Stack
+### 6. Observability & Monitoring Stack
 - **Prometheus & Grafana**: Industry standard for metrics and visualization.
 - **Datadog / New Relic**: Full-stack SaaS observability (Logs, Traces, Metrics).
 - **ELK / LGTM Stack**: Scalable log management and analysis.
 
-### 6. Incident Management & Notifications
+### 7. Incident Management & Notifications
 - **PagerDuty / Opsgenie**: Enterprise incident orchestration and on-call.
 - **Slack / MS Teams Hooks**: Direct low-cost operational alerting.
 
-### 7. Business Metrics & Analytics
+### 8. Business Metrics & Analytics
 - **PostHog / Mixpanel**: Product analytics with event-based tracking.
 - **Google Analytics 4**: Standard web traffic and conversion tracking.
 - **Segment / RudderStack**: Customer Data Platform (CDP) for event routing.
 
-### 8. Web Application Platform Type
+### 9. Web Application Platform Type
 - **Progressive Web App (PWA)**: Offline-capable, installable, native-like UX.
 - **Single Page Application (SPA)**: Fast client-side routing, no offline support.
 - **Server-Side Rendered (SSR/SSG)**: SEO-optimized, fast first-paint, server-dependent.
@@ -65,7 +71,7 @@ Consult the following inventories when evaluating your Decision Matrices. Choose
 ## Step-by-Step Execution Logic
 1. **Step 0: Consultation & Clarification**: 
    - Analyze the Phase 03 SRS (FRS, NFRS, Workload Analysis, NFR-COMP).
-   - **Ask 3-5 high-impact questions** to clarify architectural trade-offs (e.g., Consistency vs. Availability).
+   - **Ask 3-5 high-impact questions** to clarify architectural trade-offs (e.g., Consistency vs. Availability) and **security boundaries/trust-zones**.
 2. **Step 1: Selection Matrices**: Evaluate stack and topology options using Weighted Decision Matrices.
 3. **Step 2: Design Baseline**: Produce ADRs, Cross-Cutting Concerns, and Threat Model.
 
@@ -93,10 +99,11 @@ Use the provided `template.md` structure in this folder.
 8. **Incident Management Strategy**: Define the alerting and response toolstack.
 9. **Quality Enforcement Stack**: Define the tools for pre-commit hooks, linting, and formatting.
 10. **Iconography Library**: Select an icon library compatible with the chosen frontend framework.
-11. **Error Handling Strategy**: Define the global pattern for error propagation (e.g., RFC 7807).
-12. **Team Composition & Skill Matrix**: Map the chosen Tech Stack to required talent profiles.
-13. **Developer Experience (DX) Baseline**: Define the local dev environment standards.
+11. **UI Styling Strategy**: Choose between utility classes, CSS modules, CSS-in-JS, or a pre-built component library.
+12. **Error Handling Strategy**: Define the global pattern for error propagation (e.g., RFC 7807).
+13. **Team Composition & Skill Matrix**: Map the chosen Tech Stack to required talent profiles.
+14. **Developer Experience (DX) Baseline**: Define the local dev environment standards.
 14. **Cross-Cutting Concerns**: Global Error Handling, Observability Architecture, Incident Response Lifecycle, Business Analytics Integration, Environment & Secret Management Strategy.
-15. **Threat Model**: Map threats to NFRS and describe technical mitigations.
+15. **Threat Model**: Map logic flaws, IDOR, Injection, and Mass Assignment threats to NFRS, providing technical architectural mitigations.
 16. **Technical Governance (RACI-T)**: Define the accountability framework for technical decisions.
 17. **Updated RTM**: Map SRS (FRS/NFRS) to Architectural Components and Topologies.

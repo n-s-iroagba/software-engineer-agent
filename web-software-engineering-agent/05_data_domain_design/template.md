@@ -34,27 +34,43 @@
 | id | UUID | PK | Primary Identifier |
 | created_at | Timestamp | N/A | Audit Trail |
 
-## 5. NFR Compliance Matrix (Data Layer)
+## 5. Data Transfer Objects (DTO) Strategy
+*Strict separation of internal Entities from external Request/Response boundaries to prevent Mass Assignment vulnerabilities.*
+
+| Domain Entity | Inbound DTO (Creation/Update) | Outbound DTO (Response) | Ignored/Protected Fields |
+| :--- | :--- | :--- | :--- |
+| [Entity Name] | `Create[Entity]Dto`, `Update[Entity]Dto` | `[Entity]ResponseDto` | `id`, `created_at`, `roleId` |
+
+## 6. Data Classification & Masking (PII)
+*Data privacy controls governed by Compliance Officer (e.g. GDPR, CCPA).*
+
+| Table/Entity | Field | Classification | Masking Rule (App Layer) | Encryption (Rest/Transit) |
+| :--- | :--- | :--- | :--- | :--- |
+| [e.g. User] | `email` | PII (Confidential) | Mask except domain | TDE |
+| [e.g. User] | `password_hash` | Secret | Fully Hidden | Arg2ID/Bcrypt |
+
+## 7. NFR Compliance Matrix (Data Layer)
 | NFR ID | Requirement | Persistence Mitigation | Status |
 | :--- | :--- | :--- | :--- |
 | NFRS-SEC-02 | Encryption at Rest| [e.g. TDE on PostgreSQL] | [Pass] |
 
-## 6. World-Class RTM (Data Layer)
+## 8. World-Class RTM (Data Layer)
 | Req ID | Entity Name | Table Name / Collection | Status | Priority |
 | :--- | :--- | :--- | :--- | :--- |
 | FRS-01 | [Entity x] | [Table y] | Designed | P0 |
 
 ---
-## 7. Human Review & Baseline Sign-off
+## 9. Human Review & Baseline Sign-off
 > [!IMPORTANT]
 > **AI Instruction**: STOP and WAIT for a human signature below before providing the next folder's output.
 
 | Role | Name | Signature / Date | Status |
 | :--- | :--- | :--- | :--- |
 | **Data Architect** | [Name] | | [Pending] |
+| **Compliance Officer** | [Name] | | [Pending] |
 | **Lead Developer** | [Name] | | [Pending] |
 
-## 8. Baseline Verification
+## 10. Baseline Verification
 - [ ] Database selection justified by Read/Write Intensity (Ph03).
 - [ ] ORM/ODM selection justified via Weighted Decision Matrix (not hardcoded).
 - [ ] Ubiquitous Language terms from Ph01 mapped 1:1 to Domain Entities.

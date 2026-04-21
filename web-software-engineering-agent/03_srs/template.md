@@ -47,12 +47,12 @@
 | NFRS-01 | [Brief] | StRS-02 | N/A | Baseline | P1 |
 
 ## 6. Industry Standards & Regulatory Compliance (NFR-COMP)
-*Mandatory compliance standards driving the system design.*
+*Mandatory compliance standards driving the system design, including data classification.*
 
-| ID | Standard | Requirement Description | Priority |
-| :--- | :--- | :--- | :--- |
-| NFR-COMP-01 | [e.g. GDPR] | [e.g. Right to be Forgotten implementation] | P0 |
-| NFR-COMP-02 | [e.g. WCAG 2.1] | [e.g. AA compliance for all public screens]| P0 |
+| ID | Standard | Requirement Description | Data Classification / PII Mapping | Priority |
+| :--- | :--- | :--- | :--- | :--- |
+| NFR-COMP-01 | [e.g. GDPR] | [e.g. Right to be Forgotten implementation] | [e.g. User Email, SSN] | P0 |
+| NFR-COMP-02 | [e.g. WCAG 2.1] | [e.g. AA compliance for all public screens]| N/A | P0 |
 
 ---
 ## 7. Human Review & Baseline Sign-off
@@ -62,6 +62,8 @@
 | Role | Name | Signature / Date | Status |
 | :--- | :--- | :--- | :--- |
 | **QA Lead** | [Name] | | [Pending] |
+| **Security Officer** | [Name] | | [Pending] |
+| **Compliance Officer** | [Name] | | [Pending] |
 | **Lead Developer** | [Name] | | [Pending] |
 
 ## 8. Baseline Verification
