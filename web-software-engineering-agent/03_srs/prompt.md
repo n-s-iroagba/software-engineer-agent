@@ -30,5 +30,5 @@ Use the provided `template.md` structure in this folder.
 2. **NFRS Specification**: Security, Performance, Scalability, and **Incident Response**.
 3. **Workload Analysis Table**: Derived technical load projections.
 4. **Observability & Business Analytics Registry**: Detailed telemetry and KPI definitions.
-5. **Industry Standards & Compliance Baseline**: Formal definition of NFR-COMP requirements (ISO, GDPR, WCAG, etc.) including explicit PII mapping.
+5. **Industry Standards & Compliance Baseline**: Formal definition of NFR-COMP requirements (e.g., SOC2, PCI-DSS, ISO, GDPR, HIPAA, WCAG) including explicit PII mapping.
 6. **Updated RTM**: Map FRS/NFRS to Stakeholder Goals from Phase 1.

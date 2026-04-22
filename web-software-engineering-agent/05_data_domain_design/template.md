@@ -42,7 +42,7 @@
 | [Entity Name] | `Create[Entity]Dto`, `Update[Entity]Dto` | `[Entity]ResponseDto` | `id`, `created_at`, `roleId` |
 
 ## 6. Data Classification & Masking (PII)
-*Data privacy controls governed by Compliance Officer (e.g. GDPR, CCPA).*
+*Data privacy controls governed by Compliance Officer (e.g., SOC2, PCI-DSS, GDPR, HIPAA, CCPA).*
 
 | Table/Entity | Field | Classification | Masking Rule (App Layer) | Encryption (Rest/Transit) |
 | :--- | :--- | :--- | :--- | :--- |

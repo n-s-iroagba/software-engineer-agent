@@ -51,8 +51,10 @@
 
 | ID | Standard | Requirement Description | Data Classification / PII Mapping | Priority |
 | :--- | :--- | :--- | :--- | :--- |
-| NFR-COMP-01 | [e.g. GDPR] | [e.g. Right to be Forgotten implementation] | [e.g. User Email, SSN] | P0 |
-| NFR-COMP-02 | [e.g. WCAG 2.1] | [e.g. AA compliance for all public screens]| N/A | P0 |
+| NFR-COMP-01 | [e.g. SOC2] | [e.g. Audit logging & access controls] | [e.g. System Logs, Auth Events] | P0 |
+| NFR-COMP-02 | [e.g. PCI-DSS] | [e.g. Tokenized card transactions] | [e.g. Credit Card PAN] | P0 |
+| NFR-COMP-03 | [e.g. GDPR] | [e.g. Right to be Forgotten implementation] | [e.g. User Email, SSN] | P0 |
+| NFR-COMP-04 | [e.g. WCAG 2.1] | [e.g. AA compliance for all public screens]| N/A | P0 |
 
 ---
 ## 7. Human Review & Baseline Sign-off

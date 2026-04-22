@@ -65,13 +65,14 @@
 | ERR-TRAN-002 | 409 | Insufficient Funds | Your account balance is too low for this transfer. |
 
 ## 6. Business Logic & Vulnerability Mitigations
-*Explicitly document endpoint-level mitigations against OWASP Top 10 API vulnerabilities (e.g., IDOR, Mass Assignment).*
+*Explicitly document endpoint-level mitigations against OWASP Top 10 API vulnerabilities (e.g., IDOR, Mass Assignment) and Idempotency guarantees.*
 
 | Endpoint / Method | Vulnerability Vector | Technical Mitigation |
 | :--- | :--- | :--- |
 | `PATCH /v1/users/:id` | IDOR (AuthZ bypass) | Verify `session.userId == :id` or `session.role == ADMIN` |
 | `POST /v1/assets` | Mass Assignment | Bind request strictly to `CreateAssetDto`, ignore extra fields |
 | `POST /v1/transfers` | Business Logic Flaw | Atomic transaction boundary, negative balance check before db commit |
+| `POST /v1/payments` | Duplicate Requests | Mandate `Idempotency-Key` header mapped to unique DB constraint |
 
 ## 7. NFR Compliance Matrix (API Layer)
 | NFR ID | Requirement | API Mitigation | Status |

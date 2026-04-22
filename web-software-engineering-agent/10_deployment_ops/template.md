@@ -80,7 +80,7 @@
 - [ ] Final RTM signed off by all leads.
 - [ ] Database migrations verified in Staging.
 - [ ] Disaster Recovery Plan / IR Runbook documented.
-- [ ] SOC II Security Audit baseline met.
+- [ ] Specific Compliance framework audit baseline met (e.g. SOC2, PCI-DSS, HIPAA).
 
 ## 9. Final Human Review & Project Closure
 > [!IMPORTANT]

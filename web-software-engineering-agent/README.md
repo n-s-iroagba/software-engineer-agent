@@ -47,6 +47,7 @@ Every phase in this pipeline follows a strict **"Consult -> Design -> Review -> 
 - **Zero Hardcoding**: All technical choices (stack, DB, auth) must be selected from provided inventories using a Weighted Decision Matrix. No magic string literals allowed in business logic; use Constants/Enums.
 - **Traceability (RTM)**: Every requirement must be tracked from Phase 01 to Phase 10 via the living Requirements Traceability Matrix.
 - **Security Vulnerability Audits**: All designs must explicitly check and mitigate business logic vulnerabilities, Insecure Direct Object References (IDOR), and Injection flaws.
+- **Idempotency Mandate**: System architectures and API designs MUST ensure that critical operations (e.g., payments, resource creation, state mutations) are resilient to duplicate requests by designing for idempotency.
 - **DTO Mandate (Mass Assignment Prevention)**: Explicit Data Transfer Objects (DTOs) MUST be used to decouple external payload structures from internal domain entities.
 - **Service Code Specification**: All implementation methods must use JSDoc tags for `@req` (Requirement), `@layer` (Architectural Layer), and `@screen` (UI Screen ID).
 - **Ubiquitous Language**: Terminology defined in Phase 01 is immutable across all code and database artifacts.

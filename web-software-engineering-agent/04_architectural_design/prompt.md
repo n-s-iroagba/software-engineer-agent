@@ -104,6 +104,6 @@ Use the provided `template.md` structure in this folder.
 13. **Team Composition & Skill Matrix**: Map the chosen Tech Stack to required talent profiles.
 14. **Developer Experience (DX) Baseline**: Define the local dev environment standards.
 14. **Cross-Cutting Concerns**: Global Error Handling, Observability Architecture, Incident Response Lifecycle, Business Analytics Integration, Environment & Secret Management Strategy.
-15. **Threat Model**: Map logic flaws, IDOR, Injection, and Mass Assignment threats to NFRS, providing technical architectural mitigations.
+15. **Threat Model**: Map logic flaws, IDOR, Injection, and Mass Assignment threats to NFRS, providing technical architectural mitigations. Explicitly include Idempotency guarantees for state-mutating operations.
 16. **Technical Governance (RACI-T)**: Define the accountability framework for technical decisions.
 17. **Updated RTM**: Map SRS (FRS/NFRS) to Architectural Components and Topologies.

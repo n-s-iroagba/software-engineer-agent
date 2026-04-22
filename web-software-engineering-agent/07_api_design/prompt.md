@@ -19,6 +19,7 @@ Consult this inventory when selecting the optimal authentication and authorizati
 2. **Step 1: Contract Design**: Define protocol-first endpoints and payloads. Map external payloads strictly to Phase 05 DTOs.
 3. **Step 2: Vulnerability Revisit**: Explicitly document IDOR checks and Input Validation on all endpoints.
 4. **Step 3: Error Standardization**: Define the RFC 7807 error schema and business error code registry.
+5. **Step 4: Idempotency Verification**: Explicitly ensure state-modifying POST/PATCH endpoints use idempotency keys or unique constraints to prevent duplicate processing.
 
 ## Constraints
 1. **Traceability**: Every endpoint must be linked to at least one FRS and one UI Screen.
